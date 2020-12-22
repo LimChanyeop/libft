@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 16:08:38 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 15:32:07 by clim             ###   ########.fr       */
+/*   Created: 2020/12/22 14:45:56 by clim              #+#    #+#             */
+/*   Updated: 2020/12/22 14:54:40 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_tolower(int c)
+int			ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	if ((c >= 'A') && (c <= 'Z'))
-		return (c + ('a' - 'A'));
-	else
-		return (c);
+	int		i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i])
+	{
+		if (--n == 0 || (s1[i] == '\0' && s2[i] == '\0'))
+			return (0);
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }

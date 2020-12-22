@@ -6,11 +6,11 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 16:00:52 by clim              #+#    #+#             */
-/*   Updated: 2020/12/21 16:02:52 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/22 15:31:41 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int			ft_isprint(int c)
 {

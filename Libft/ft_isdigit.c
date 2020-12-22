@@ -6,13 +6,13 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 15:43:38 by clim              #+#    #+#             */
-/*   Updated: 2020/12/21 15:47:01 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/22 15:32:31 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-int			isdigit(int c)
+int			ft_isdigit(int c)
 {
 	return ((c >= '0') && (c <= '9'));
 }

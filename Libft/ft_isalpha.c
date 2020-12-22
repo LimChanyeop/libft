@@ -6,11 +6,11 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 15:34:51 by clim              #+#    #+#             */
-/*   Updated: 2020/12/21 15:47:38 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/22 15:32:45 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int			ft_isalpha(int c)
 {

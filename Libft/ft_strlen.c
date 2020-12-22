@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/21 16:08:38 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 15:32:07 by clim             ###   ########.fr       */
+/*   Created: 2020/12/22 14:21:07 by clim              #+#    #+#             */
+/*   Updated: 2020/12/22 14:33:49 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_tolower(int c)
+int			ft_strlen(char *str)
 {
-	if ((c >= 'A') && (c <= 'Z'))
-		return (c + ('a' - 'A'));
-	else
-		return (c);
+	int		count;
+
+	count = 0;
+	while (*str != '\0')
+	{
+		str++;
+		count++;
+	}
+	return (count);
 }
