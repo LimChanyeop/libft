@@ -6,11 +6,12 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:32:05 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 16:34:29 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/23 10:40:05 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void			*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {

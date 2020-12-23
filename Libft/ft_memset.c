@@ -6,11 +6,12 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 15:55:50 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 16:23:17 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/23 10:40:29 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void				*ft_memset(void *b, int c, size_t len)
 {

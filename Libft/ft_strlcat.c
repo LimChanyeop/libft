@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 14:56:28 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 15:29:08 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/23 10:39:03 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 unsigned int		ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	char			*dest_store;
-	char			*src_store;
 	unsigned int	dest_len;
 	unsigned int	i;
 
-	src_store = src;
 	dest_store = dest;
 	i = size;
 	while (*dest && (i-- != 0))

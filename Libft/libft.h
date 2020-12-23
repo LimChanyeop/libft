@@ -6,12 +6,13 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 13:35:16 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 15:27:49 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/23 10:38:36 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 
 /* memset bzero memcpy memccpy memmove memchr memcmp strlen strlcpy 
 
