@@ -1,32 +1,31 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I -c
+CFLAGS = -Wall -Wextra -Werror -c
 NAME = libft.a
 FILES = main.c \
-			ft_tolower.c \
-			ft_memset \
-			ft_zero \
-			ft_memcpy \
-			ft_memccpy \
-			ft_memmove \
-			ft_memchr \
-			ft_memcmp \
-			ft_strlen \
-			ft_strlcpy \
-			ft_strlcat \
-			ft_strchr \
-			ft_strrchr \
-			ft_strnstr \
-			ft_strncmp \
-			ft_atoi \
-			ft_isalpha \
-			ft_isdigit \
-			ft_isalnum \
-			ft_isascii \
-			ft_isprint \
-			ft_toupper \
-			ft_tolower \
+					ft_tolower.c \
+					ft_memset.c \
+					ft_bzero.c \
+					ft_memcpy.c \
+					ft_memccpy.c \
+					ft_memmove.c \
+					ft_memchr.c \
+					ft_memcmp.c \
+					ft_strlen.c \
+					ft_strlcpy.c \
+					ft_strlcat.c \
+					ft_strchr.c \
+					ft_strrchr.c \
+					ft_strnstr.c \
+					ft_strncmp.c \
+					ft_atoi.c \
+					ft_isalpha.c \
+					ft_isdigit.c \
+					ft_isalnum.c \
+					ft_isascii.c \
+					ft_isprint.c \
+					ft_toupper.c \
 
-OBJS = $(FILES:.c=.o)
+OBJS = $(FILES:%.c=%.o)
 
 all : $(NAME)
 
@@ -38,7 +37,6 @@ $(NAME) : $(OBJS)
 
 clean :
 	rm -f $(OBJS)
-	rm -f $(FILES)
 
 fclean : clean
 	rm -f $(NAME)

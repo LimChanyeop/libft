@@ -6,13 +6,16 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 15:34:51 by clim              #+#    #+#             */
-/*   Updated: 2020/12/22 15:32:45 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/25 00:16:14 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int			ft_isalpha(int c)
-{
-	return ((c >= 'a' && c <= 'z') || (c <= 'A' && c >= 'Z'));
+{	
+	char	ch;
+
+	ch = (char)c;
+	return ((ch >= 'a' && ch <= 'z') || (ch <= 'A' && ch >= 'Z'));
 }

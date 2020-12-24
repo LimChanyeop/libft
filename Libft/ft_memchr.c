@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 15:42:30 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 17:29:14 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/25 00:18:16 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void			*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*ptr;
+	char		*ptr;
 	size_t		i;
 
-	ptr = (const char *)s;
+	ptr = (char *)s;
 	i = 0;
 	while (i < n)
 	{

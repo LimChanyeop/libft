@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 22:49:54 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 23:14:13 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/24 23:33:26 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 char				*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t			leng;
 	unsigned int	i;
 	unsigned int	i1;
 
-	if (ft_strlen(little) == 0)
+	if (ft_strlen((char *)little) == 0)
 		return ((char *)big);
 	i = 0;
 	while (*(big + i) && i < len)
