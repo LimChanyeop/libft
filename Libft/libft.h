@@ -6,14 +6,14 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 13:35:16 by clim              #+#    #+#             */
-/*   Updated: 2020/12/23 10:38:36 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/24 15:39:04 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-
+#include <stdlib.h>
 /* memset bzero memcpy memccpy memmove memchr memcmp strlen strlcpy 
 
   strlcat strchr strrchr strnstr strncmp atoi isalpha isdigit isalnum isascii
@@ -42,4 +42,5 @@ int						ft_strncmp(char *s1, char *s2, unsigned int n);
 
 unsigned int			ft_strlcpy(char *dest, char *src, unsigned int size);
 
+void					*ft_memccpy(void *dst, const void *src, int c, size_t n);
 #endif
