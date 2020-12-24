@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/22 16:32:05 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 22:36:50 by clim             ###   ########.fr       */
+/*   Created: 2020/12/24 22:49:54 by clim              #+#    #+#             */
+/*   Updated: 2020/12/24 23:14:13 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+char				*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t		i;
-	char		*dst_ptr;
-	char		*src_ptr;
+	size_t			leng;
+	unsigned int	i;
+	unsigned int	i1;
 
-	dst_ptr = (char *)dst;
-	src_ptr = (char *)src;
+	if (ft_strlen(little) == 0)
+		return ((char *)big);
 	i = 0;
-	while (i < n)
+	while (*(big + i) && i < len)
 	{
-		*(dst_ptr + i) = *(src_ptr + i);
+		i1 = 0;
+		while (*(big + i1) == *(little + i1) && *(little + i1) && *(big + i1))
+		{
+			i1++;
+		}
+		if (!(i1) && !(*(little + i1)))
+			return ((char *)big + i);
 		i++;
 	}
-	return (dst);
+	return (0);
 }
