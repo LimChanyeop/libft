@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/24 22:49:54 by clim              #+#    #+#             */
-/*   Updated: 2020/12/28 12:58:28 by clim             ###   ########.fr       */
+/*   Created: 2020/12/28 12:59:19 by clim              #+#    #+#             */
+/*   Updated: 2020/12/28 13:14:17 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_strnstr(const char *big, const char *little, size_t len)
+char			*ft_strdup(const char *s)
 {
-	unsigned int	i;
+	char		*ptr;
 
-	if (!(*little))
-		return ((char *)big);
-	i = 0;
-	while (*(big + i) && i + ft_strlen((char *)little) < len)
-	{
-		if (ft_memcmp((big + i), little, ft_strlen((char *)little)) == 0)
-			return ((char *)(big + i));
-		i++;
-	}
-	return (0);
+	ptr = (char *)malloc(sizeof(char) * ft_strlen((char *)s));
+	if (!ptr)
+		return (0);
+	ft_memcpy((char *)ptr, (char *)s, ft_strlen((char *)s) + 1);
+	return (ptr);
 }

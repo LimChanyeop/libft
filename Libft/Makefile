@@ -1,8 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -c
 NAME = libft.a
-FILES = main.c \
-					ft_tolower.c \
+FILES = ft_tolower.c \
 					ft_memset.c \
 					ft_bzero.c \
 					ft_memcpy.c \
@@ -24,6 +23,8 @@ FILES = main.c \
 					ft_isascii.c \
 					ft_isprint.c \
 					ft_toupper.c \
+					ft_strdup.c \
+                    ft_calloc.c
 
 OBJS = $(FILES:%.c=%.o)
 
@@ -33,7 +34,7 @@ $(OBJS) : $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
 
 $(NAME) : $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean :
 	rm -f $(OBJS)

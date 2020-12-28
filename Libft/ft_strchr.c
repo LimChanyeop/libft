@@ -6,22 +6,32 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 18:50:31 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 19:08:57 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/27 23:54:16 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strchr(const char *s, int c)
+char			*ft_strchr(const char *s, int c)
 {
-	int		i;
+	const char	find = c;
 
-	i = 0;
-	while (*(s + i))
+	while (*s != 0)
 	{
-		if (*(s + i) == (char)c)
-			return ((char *)s + i);
-		i++;
+		if (*s == find)
+			return ((char *)s);
+		s++;
 	}
+	if (*s == find)
+		return ((char *)s);
 	return (0);
 }
+//#include <string.h>
+//#include <stdio.h>
+//int main()
+//{
+//	char str[] = "bonjour";
+//	printf("original = %s\n", strchr(str, '\n'));
+//	printf("myfunc = %s\n", ft_strchr(str,'\n'));
+//}
+

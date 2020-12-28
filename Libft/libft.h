@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 13:35:16 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 23:14:31 by clim             ###   ########.fr       */
+/*   Updated: 2020/12/28 13:28:45 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,8 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 
 char			*ft_strnstr(const char *big, const char *little, size_t len);
+
+char			*ft_strdup(const char *s);
+
+void			*ft_calloc(size_t nmemb, size_t size);
 #endif
