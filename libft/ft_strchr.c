@@ -26,12 +26,3 @@ char			*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-//#include <string.h>
-//#include <stdio.h>
-//int main()
-//{
-//	char str[] = "bonjour";
-//	printf("original = %s\n", strchr(str, '\n'));
-//	printf("myfunc = %s\n", ft_strchr(str,'\n'));
-//}
-

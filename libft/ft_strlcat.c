@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size)
+size_t			ft_strlcat(char *dest, const char *src, size_t size)
 {
 	char		*dest_ptr;
 	char		*src_ptr;
 	unsigned int	dest_len;
 	unsigned int	i;
 
-	src_ptr = src;
+	src_ptr = (char *)src;
 	dest_ptr = dest;
 	i = size;
 	while (*dest && (i-- != 0))
