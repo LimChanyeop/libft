@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int				match_test(const char c1, const char *set)
+int				match_test(char const c1, char const *set)
 {
 	int			i;
 
@@ -23,8 +23,8 @@ int				match_test(const char c1, const char *set)
 			return(1); 
 	}
 	return(0);
-
 }
+
 char			*ft_strtrim(char const *s1, char const *set)
 {
 	int			len;

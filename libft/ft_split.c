@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:09:33 by clim              #+#    #+#             */
-/*   Updated: 2020/12/29 18:42:02 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/01 19:11:39 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void			allocate(char **ptr, int size, char *str, char c)
 			i++;
 		j++;
 	}
+	ptr[i] = 0;
 }
 
 int				get_size(char const *s, char c)
@@ -86,7 +87,13 @@ char			**ft_split(char const *s, char c)
 	ptr = NULL;
 	str = (char *)s;
 	size = get_size((const char *)(str), c);
-	ptr = (char **)malloc(sizeof(char *) * size);
+	if (size == 0)
+	{
+		ptr = (char **)malloc(sizeof(char *));
+		ptr[0] = 0;
+		return (ptr);
+	}
+	ptr = (char **)malloc(sizeof(char *) * (size + 1));
 	if (allocation_test(ptr, -1) == -1)
 		return (0);
 	allocate(ptr, size, str, c);

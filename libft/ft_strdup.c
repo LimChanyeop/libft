@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 12:59:19 by clim              #+#    #+#             */
-/*   Updated: 2020/12/28 13:14:17 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/01 19:12:00 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char			*ft_strdup(const char *s)
 {
 	char		*ptr;
 
-	ptr = (char *)malloc(sizeof(char) * ft_strlen((char *)s));
+	ptr = (char *)malloc(sizeof(char) * ft_strlen((char *)s + 1));
 	if (!ptr)
 		return (0);
 	ft_memcpy((char *)ptr, (char *)s, ft_strlen((char *)s) + 1);
