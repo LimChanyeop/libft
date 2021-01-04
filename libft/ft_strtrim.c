@@ -6,13 +6,13 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 17:48:23 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 13:21:02 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 13:48:16 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				match_test(char const c1, char const *set)
+static int		match_test(char const c1, char const *set)
 {
 	int			i;
 

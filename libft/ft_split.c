@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:09:33 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 11:47:20 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 15:21:57 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ char			**ft_split(char const *s, char c)
 	int			size;
 	char		*str;
 
+	if (!*s)
+		return (0);
 	ptr = NULL;
 	str = (char *)s;
 	size = get_size((const char *)(str), c);
