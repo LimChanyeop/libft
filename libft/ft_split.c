@@ -6,29 +6,30 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:09:33 by clim              #+#    #+#             */
-/*   Updated: 2021/01/01 19:11:39 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 11:47:20 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			allocation_test(char **ptr, int i)
+static int		allocation_test(char **ptr, int i)
 {
 	if (!ptr && i == -1)
 	{
 		free(ptr);
 		return (-1);
 	}
-	else if(!ptr[i] && i != -1)
+	else if (!ptr[i] && i != -1)
 	{
 		while (i >= 0)
 			free(ptr[i--]);
+		free(ptr);
 		return (-1);
 	}
 	return (0);
 }
 
-void			allocate(char **ptr, int size, char *str, char c)
+static void		allocate(char **ptr, int size, char *str, char c)
 {
 	int			i;
 	int			j;
@@ -54,10 +55,10 @@ void			allocate(char **ptr, int size, char *str, char c)
 			i++;
 		j++;
 	}
-	ptr[i] = 0;
+	ptr[j] = 0;
 }
 
-int				get_size(char const *s, char c)
+static int		get_size(char const *s, char c)
 {
 	char		*str;
 	int			size;
@@ -65,8 +66,8 @@ int				get_size(char const *s, char c)
 
 	i = 0;
 	str = (char *)s;
-	size =0;
-	while(str[i])
+	size = 0;
+	while (str[i])
 	{
 		while (str[i] == c)
 			i++;
