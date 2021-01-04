@@ -6,16 +6,16 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 15:06:40 by clim              #+#    #+#             */
-/*   Updated: 2020/12/27 16:51:52 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 13:24:38 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memccpy(void *dst, const void *src, int c, size_t n)
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char	*dst_ptr;
-	size_t		i;
+	size_t			i;
 
 	dst_ptr = (unsigned char *)dst;
 	i = 0;

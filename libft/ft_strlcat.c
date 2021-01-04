@@ -6,16 +6,16 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 14:56:28 by clim              #+#    #+#             */
-/*   Updated: 2020/12/23 10:39:03 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 13:14:32 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlcat(char *dest, const char *src, size_t size)
+size_t				ft_strlcat(char *dest, const char *src, size_t size)
 {
-	char		*dest_ptr;
-	char		*src_ptr;
+	char			*dest_ptr;
+	char			*src_ptr;
 	unsigned int	dest_len;
 	unsigned int	i;
 

@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 11:36:32 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 12:05:22 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/04 12:56:16 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list			*ft_lstlast(t_list *lst)
 	while (lst)
 	{
 		list = lst;
-		lst = lst->next; 
+		lst = lst->next;
 	}
 	return (list);
 }
