@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 17:29:47 by clim              #+#    #+#             */
-/*   Updated: 2020/12/24 17:46:24 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/05 10:57:21 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (*(str1 + i) == *(str2 + i) && i < n)
+	while (i < n)
+	{
+		if (*(str1 + i) != *(str2 + i))
+			return (*(str1 + i) - *(str2 + i));
 		i++;
-	if (i == n)
-		return (0);
-	else
-		return (*(str1 + i) - *(str2 + i));
+	}
+	return (0);
 }

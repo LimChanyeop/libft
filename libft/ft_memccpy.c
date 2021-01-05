@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 15:06:40 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 13:37:16 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/05 10:21:54 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		dst_ptr[i] = *((unsigned char *)src + i);
-		if ((*(unsigned char *)(src + i)) == (unsigned char)c)
-			return (dst_ptr + i + 1);
+		dst_ptr[i] = *((unsigned char *)(src + i));
+		if (*((unsigned char *)(src + i)) == (unsigned char)c)
+			return (dst_ptr + (i + 1));
 		i++;
 	}
 	return (0);

@@ -6,20 +6,22 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:32:05 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 14:52:42 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/05 10:58:49 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_memcpy(void *dst, const void *src, size_t n)
+void					*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t		i;
-	char		*dst_ptr;
-	char		*src_ptr;
+	size_t				i;
+	unsigned char		*dst_ptr;
+	unsigned char		*src_ptr;
 
-	dst_ptr = (char *)dst;
-	src_ptr = (char *)src;
+	if (!dst && !src)
+		return (0);
+	dst_ptr = (unsigned char *)dst;
+	src_ptr = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
