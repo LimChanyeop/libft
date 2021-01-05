@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 16:36:48 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 13:12:49 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/05 11:36:43 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	int			s1_len;
 	int			s2_len;
 
+	if (!s1 || !s2)
+		return (0);
 	s1_len = ft_strlen((char *)s1);
 	s2_len = ft_strlen((char *)s2);
 	ptr = malloc(sizeof(char) * (s1_len + s2_len + 1));

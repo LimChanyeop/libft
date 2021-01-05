@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 17:48:23 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 13:48:16 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/05 11:51:28 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	int			len;
 	char		*ptr;
 
+	if (!s1 || !set)
+		return (0);
 	if (!(*set))
 		return ((char *)ft_strdup(""));
 	while (match_test(*s1, set))
@@ -39,8 +41,6 @@ char			*ft_strtrim(char const *s1, char const *set)
 	while (len >= 0 && match_test(s1[len], set))
 		len--;
 	ptr = malloc(sizeof(char) * (len + 2));
-	if (!ptr)
-		free(ptr);
 	ft_strlcpy(ptr, (char *)s1, (len + 2));
 	return (ptr);
 }
