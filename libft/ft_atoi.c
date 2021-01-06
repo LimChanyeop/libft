@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 13:43:31 by clim              #+#    #+#             */
-/*   Updated: 2021/01/06 12:02:36 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 16:17:43 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int		input_test(int sign, char *str)
 	char		max[20];
 
 	ft_strlcpy((char *)max, "9223372036854775808", 20);
-	if (sign == -1)
+	if (sign == 1)
 		max[19] = '7';
 	i = 0;
 	while (str[i] >= '0' && str[i] <= '9')
