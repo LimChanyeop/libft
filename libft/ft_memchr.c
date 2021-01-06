@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 15:42:30 by clim              #+#    #+#             */
-/*   Updated: 2020/12/28 16:23:42 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 12:42:30 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void		*ft_memchr(const void *s, int c, size_t n)
 		else
 			return ((void *)p);
 	}
-	return (NULL);
+	return (0);
 }

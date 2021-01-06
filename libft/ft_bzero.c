@@ -6,12 +6,11 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 16:13:41 by clim              #+#    #+#             */
-/*   Updated: 2020/12/23 10:39:26 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 12:59:34 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void			ft_bzero(void *s, size_t n)
 {

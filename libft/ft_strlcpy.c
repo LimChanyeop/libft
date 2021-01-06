@@ -6,30 +6,30 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/22 14:39:03 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 10:40:38 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 12:45:28 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t				ft_strlcpy(char *dest, const char *src, size_t size)
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	unsigned	int	i;
-	unsigned	int count;
+	size_t			i;
+	size_t			count;
 
-	if (!dest || !src)
+	if (!dst || !src)
 		return (0);
 	i = 0;
 	count = 0;
 	while (src[i])
 		i++;
-	if (size == 0)
+	if (dstsize == 0)
 		return (i);
-	while ((count < i) && (count < size - 1))
+	while ((count < i) && (count < dstsize - 1))
 	{
-		dest[count] = src[count];
+		dst[count] = src[count];
 		count++;
 	}
-	dest[count] = '\0';
+	dst[count] = '\0';
 	return (i);
 }

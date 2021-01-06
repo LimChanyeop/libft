@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:04:07 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 13:12:37 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 12:38:21 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,26 @@
 
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*res;
-	t_list	*current;
+	t_list	*result;
+	t_list	*cur;
 
 	if (!lst)
 		return (0);
-	res = ft_lstnew(f(lst->content));
-	if (!res)
+	result = ft_lstnew(f(lst->content));
+	if (!result)
 		return (0);
-	current = res;
+	cur = result;
 	lst = lst->next;
 	while (lst)
 	{
-		current->next = ft_lstnew(f(lst->content));
-		current = current->next;
-		if (!current)
+		cur->next = ft_lstnew(f(lst->content));
+		cur = cur->next;
+		if (!cur)
 		{
-			ft_lstclear(&res, del);
+			ft_lstclear(&result, del);
 			return (0);
 		}
 		lst = lst->next;
 	}
-	return (res);
+	return (result);
 }

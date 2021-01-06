@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:09:33 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 16:48:51 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 10:55:21 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 static int		allocation_test(char **ptr, int i)
 {
-	if (!ptr && i == -1)
-	{
-		free(ptr);
-		return (-1);
-	}
-	else if (!ptr[i] && i != -1)
+	if (!ptr[i])
 	{
 		while (i >= 0)
-			free(ptr[i--]);
+			free(ptr[--i]);
 		free(ptr);
 		return (-1);
 	}
@@ -87,14 +82,8 @@ char			**ft_split(char const *s, char c)
 	if (!s)
 		return (0);
 	size = get_size((char *)s, c);
-	if (size == 0)
-	{
-		ptr = (char **)malloc(sizeof(char *));
-		ptr[0] = 0;
-		return (ptr);
-	}
 	ptr = (char **)malloc(sizeof(char *) * (size + 1));
-	if (allocation_test(ptr, -1) == -1)
+	if (!ptr)
 		return (0);
 	allocate(ptr, size, (char *)s, c);
 	return (ptr);

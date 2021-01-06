@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 22:49:54 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 12:32:15 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 12:49:54 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char				*ft_strnstr(const char *haystack, const char *needle, \
 																size_t len)
 {
-	unsigned int	i;
+	size_t			i;
 
 	if (!(*needle))
 		return ((char *)haystack);
