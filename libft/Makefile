@@ -62,9 +62,11 @@ bonus : $(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS_BONUS)
 
 clean :
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean : clean
 	rm -f $(NAME)
 
 re : fclean all
+
+.PHONY: bonus all clean fclean re

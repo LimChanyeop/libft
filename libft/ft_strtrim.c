@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 17:48:23 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 11:51:28 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 13:21:17 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int		match_test(char const c1, char const *set)
 {
-	int			i;
+	size_t		i;
 
 	i = 0;
 	while (set[i])

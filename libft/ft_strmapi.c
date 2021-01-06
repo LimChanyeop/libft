@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:21:24 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 13:22:55 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 13:09:33 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int			len;
-	int			i;
+	size_t		len;
+	size_t		i;
 	char		*str;
 
 	if (!s || !f)

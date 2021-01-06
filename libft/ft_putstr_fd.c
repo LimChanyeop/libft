@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:08:24 by clim              #+#    #+#             */
-/*   Updated: 2021/01/04 14:34:39 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 13:10:34 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void			ft_putstr_fd(char *s, int fd)
 {
 	if (fd <= 0 || !s)
 		return ;
-	write(fd, (const void *)s, (size_t)ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

@@ -6,13 +6,13 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 10:36:45 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 12:29:04 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 13:08:53 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			allocate(char *arr, char *a, int idx)
+static void		allocate(char *arr, char *a, int idx)
 {
 	int			i;
 

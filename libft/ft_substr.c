@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 14:34:14 by clim              #+#    #+#             */
-/*   Updated: 2021/01/05 11:35:40 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/06 13:03:53 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ char			*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start >= (unsigned int)ft_strlen((char *)s))
 		return (ft_strdup(""));
 	s += start;
-	ft_strlcpy(str, (char *)s, (unsigned int)(len + 1));
+	ft_strlcpy(str, (char *)s, len + 1);
 	return (str);
 }
