@@ -6,7 +6,7 @@
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 17:48:23 by clim              #+#    #+#             */
-/*   Updated: 2021/01/06 13:21:17 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/07 10:13:38 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char			*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (0);
 	if (!(*set))
-		return ((char *)ft_strdup(""));
+		return ((char *)s1);
 	while (match_test(*s1, set))
 		s1++;
 	len = ft_strlen((char *)s1) - 1;
