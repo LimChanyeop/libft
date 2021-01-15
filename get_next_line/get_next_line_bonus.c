@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clim <clim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/12 11:27:39 by clim              #+#    #+#             */
-/*   Updated: 2021/01/15 13:38:25 by clim             ###   ########.fr       */
+/*   Updated: 2021/01/15 13:40:56 by clim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int				if_more_line(char *backup_buf)
 {
-	int			idx;
+	int			i;
 
-	idx = 0;
-	while (backup_buf[idx])
+	i = 0;
+	while (backup_buf[i])
 	{
-		if (backup_buf[idx] == '\n')
-			return (idx);
-		idx++;
+		if (backup_buf[i] == '\n')
+			return (i);
+		i++;
 	}
 	return (-1);
 }
